@@ -1,23 +1,104 @@
 aid: bitbank
+
 name: bitbank
-description: 'bitbank is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://bitbank.cc/assets/images/share.png
+
+description: Bitbank is a Japanese cryptocurrency exchange offering spot, margin, lending, staking, and API trading services. It provides a public
+  API for market data and order execution, targeting both retail and institutional clients. The platform emphasizes security, instant JPY withdrawals,
+  and a wide range of crypto assets.
+
 url: https://raw.githubusercontent.com/api-evangelist/bitbank/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-28 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-28'
+
 modified: '2026-09-28'
+
 tags:
-- Company
-apis: []
+- Cryptocurrency
+- Exchange
+- Japan
+- API
+- Finance
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Spectral
+  url: rules/bitbank-rules.yml
+- type: JSONLD
+  url: json-ld/bitbank-context.jsonld
+- type: Vocabulary
+  url: vocabulary/bitbank-vocabulary.yml
+- type: DataModel
+  url: data-model/bitbank-data-model.yml
+- type: Authentication
+  url: authentication/bitbank-authentication.yml
+- type: Conformance
+  url: conformance/bitbank-conformance.yml
+- type: Hosts
+  url: hosts/bitbank-hosts.yml
+- type: Vendors
+  url: vendors/bitbank-vendors.yml
+- type: Security
+  url: https://bitbank.cc/guide/security
+- type: Newsroom
+  url: https://corporate.bitbank.cc/news
+- type: Blog
+  url: https://bitbank.cc/blog
+- type: DomainSecurity
+  url: security/bitbank-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://bitbank.cc
+- type: Documentation
+  url: https://docs.bitbank.cc
+- type: APIReference
+  url: https://github.com/bitbankinc/bitbank-api-docs
+- type: GettingStarted
+  url: https://bitbank.cc/guide/flow
+- type: Support
+  url: https://support.bitbank.cc/hc/ja/requests/new
+- type: PrivacyPolicy
+  url: https://bitbank.cc/privacy-policy
+
+apis:
+- aid: bitbank:bitbank-api
+  name: bitbank API
+  description: 'bitbank API as documented publicly: 71 operations. Contract generated from the documentation by API Evangelist (2026-09-28); not
+    the provider''s own document.'
+  humanURL: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands
+  baseURL: https://gh.io
+  properties:
+  - type: OpenAPI
+    url: openapi/_ae-authored/bitbank-openapi-generated.yml
+    x-provenance: generated
+  - type: JSONSchema
+    url: json-schema/bitbank-post-applications-clientid-token-request-schema.json
+
+x-coverage:
+  state: unreadable
+  reason: js-rendered-docs
+  detail: Docs endpoint https://docs.bitbank.cc/openapi.json returns HTML instead of a machine‑readable spec.
+  evidence:
+  - url: https://docs.bitbank.cc/openapi.json
+    status: 200
+  checked: '2026-09-28'
+x-enrichment:
+  date: '2026-09-28'
+  status: enriched
+  artifacts_added: 15
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local,regulatory=local

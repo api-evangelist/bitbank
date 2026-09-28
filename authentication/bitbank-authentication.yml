@@ -1,0 +1,17 @@
+generated: '2026-09-28'
+method: searched
+generator: extract-docs-artifacts.py (local)
+source: https://docs.github.com/en/authentication/connecting-to-github-with-ssh
+sources:
+- https://docs.github.com/en/authentication/connecting-to-github-with-ssh
+- https://docs.github.com/en/authentication/connecting-to-github-with-ssh/adding-a-new-ssh-key-to-your-github-account
+- https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys
+- https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+description: Authentication methods for GitHub via SSH as described in the provided documentation.
+schemes:
+- type: other
+  name: SSH
+  evidence: When you connect via SSH, you authenticate using a private key file on your local machine.
+  location: ssh
+  how_to_obtain: Add the public key to your GitHub account.
+docs: https://docs.github.com/en/authentication/connecting-to-github-with-ssh

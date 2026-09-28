@@ -1,0 +1,15 @@
+generated: '2026-09-28'
+method: derived
+generator: derive-vocabulary.py
+source: openapi/_ae-authored/bitbank-openapi-generated.yml
+vocabulary:
+  name: bitbank Domain Vocabulary
+  description: 'Terms declared by bitbank''s own API contract: its resource groups, objects and enumerations, with the contract''s definitions.
+    Derived, not authored.'
+  version: '2026-09-28'
+  terms:
+  - term: PostApplicationsClientidTokenRequest
+    definition: 'Object declared by the contract with fields: access_token.'
+    tags:
+    - Object
+    source: openapi/_ae-authored/bitbank-openapi-generated.yml#/components/schemas/PostApplicationsClientidTokenRequest

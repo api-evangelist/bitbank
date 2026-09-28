@@ -1,0 +1,1551 @@
+openapi: 3.1.0
+info:
+  title: bitbank API
+  version: '2026-09-28'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-28: 71 operation(s) read from 4 public documentation page(s) (each operation
+    names its page in x-source). This is not the provider''s published contract; bitbank has published no machine-readable contract that the pipeline
+    could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 5
+    documentation: 66
+    pages-with-code: 3
+    pages-read: 4
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-28'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands
+  - https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api
+  - https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli
+  - https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+servers:
+- url: https://gh.io
+paths:
+  /:
+    get:
+      operationId: get
+      tags:
+      - Api
+      summary: GET /
+      x-source: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl https://example.com\n echo EOF\n } >> \"$GITHUB_ENV\"\n steps: \n - name: Set the value in bash \n id: step_one \n run:\
+          \ |\n {\n echo 'JSON_RESPONSE<<EOF'"
+  /PATH:
+    get:
+      operationId: get_PATH
+      tags:
+      - Path
+      summary: GET /PATH
+      x-source: https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request GET  --url \"https://api.github.com/PATH\"  --header \"Authorization: Bearer $GH_TOKEN\"\n jobs: \n use_api:\
+          \ \n runs-on: ubuntu-latest \n permissions: {}\n steps: \n - env: \n GH_TOKEN: ${{ secrets.GITHUB_TOKEN }} \n run: |"
+  /applications/{clientid}/token:
+    post:
+      operationId: post_applications_clientid_token
+      tags:
+      - Applications
+      summary: POST /applications/{clientId}/token
+      x-source: https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api
+      parameters:
+      - name: clientid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApplicationsClientidTokenRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST  --url \"https://api.github.com/applications/YOUR_CLIENT_ID/token\"  --user \"YOUR_CLIENT_ID:YOUR_CLIENT_SECRET\"\
+          \  --header \"Accept: application/vnd.github+json\"  --header \"X-GitHub-Api-Version: 2026-03-10\"  --data '{\n \"access_token\": \"\
+          ACCESS_TOKEN_TO_CHECK\"\n}'\n The client ID and client secret are associated with the app, not with the owner of the app or a user who\
+          \ authorized the a"
+  /copilot-install:
+    get:
+      operationId: get_copilot_install
+      tags:
+      - Copilot Install
+      summary: GET /copilot-install
+      x-source: https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: curl -fsSL https://gh.io/copilot-install | bash
+  /octocat:
+    get:
+      operationId: get_octocat
+      tags:
+      - Octocat
+      summary: GET /octocat
+      x-source: https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request GET  --url \"https://api.github.com/octocat\"  --header \"Authorization: Bearer YOUR-TOKEN\"  --header \"X-GitHub-Api-Version:\
+          \ 2026-03-10\"\n Note \nIn most cases, you can use Authorization: Bearer or Authorization: token to pass a token. However, if you are\
+          \ passing a JSON web token (JWT), you must use Authorization: Bearer . \n Failed login limit \n If you try to use a REST API endpoint\
+          \ with"
+  /organizations/{org}/actions/cache/{cacheid}:
+    get:
+      operationId: get_organizations_org_actions_cache_cacheid
+      tags:
+      - Organizations
+      summary: Permissions required for fine-grained personal access tokens
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: cacheid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at cacheId
+    put:
+      operationId: put_organizations_org_actions_cache_cacheid
+      tags:
+      - Organizations
+      summary: Organization permissions for "Administration"
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: cacheid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at cacheId
+  /organizations/{org}/settings/billing/budgets:
+    post:
+      operationId: post_organizations_org_settings_billing_budgets
+      tags:
+      - Organizations
+      summary: Organization permissions for "Administration"
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /organizations/{org}/settings/billing/budgets/{budgetId}:
+    delete:
+      operationId: delete_organizations_org_settings_billing_budgets_budgetId
+      tags:
+      - Organizations
+      summary: Organization permissions for "Administration"
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: budgetId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    get:
+      operationId: get_organizations_org_settings_billing_budgets_budgetId
+      tags:
+      - Organizations
+      summary: Permissions required for fine-grained personal access tokens
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: budgetId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    patch:
+      operationId: patch_organizations_org_settings_billing_budgets_budgetId
+      tags:
+      - Organizations
+      summary: Organization permissions for "Administration"
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: budgetId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /organizations/{org}/settings/billing/usage/summary:
+    get:
+      operationId: get_organizations_org_settings_billing_usage_summary
+      tags:
+      - Organizations
+      summary: Get billing usage summary
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /organizations/{org}/settings/billing/{billingid}:
+    get:
+      operationId: get_organizations_org_settings_billing_billingid
+      tags:
+      - Organizations
+      summary: Permissions required for fine-grained personal access tokens
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: billingid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at billingId
+  /organizations/{org}/settings/billing/{billingid}/usage:
+    get:
+      operationId: get_organizations_org_settings_billing_billingid_usage
+      tags:
+      - Organizations
+      summary: Permissions required for fine-grained personal access tokens
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: billingid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at billingId
+  /orgs/{org}:
+    delete:
+      operationId: delete_orgs_org
+      tags:
+      - Orgs
+      summary: Organization permissions for "Administration"
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    patch:
+      operationId: patch_orgs_org
+      tags:
+      - Orgs
+      summary: Organization permissions for "Administration"
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/actions/cache/{cacheid}:
+    get:
+      operationId: get_orgs_org_actions_cache_cacheid
+      tags:
+      - Orgs
+      summary: Get actions cache usage
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: cacheid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at cacheId
+  /orgs/{org}/actions/hosted-runners/images/{imageid}:
+    get:
+      operationId: get_orgs_org_actions_hosted_runners_images_imageid
+      tags:
+      - Orgs
+      summary: List GitHub‑owned hosted runner images
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: imageid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at imageId
+  /orgs/{org}/actions/hosted-runners/{hostedRunnerId}:
+    delete:
+      operationId: delete_orgs_org_actions_hosted_runners_hostedRunnerId
+      tags:
+      - Orgs
+      summary: Organization permissions for "Administration"
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: hostedRunnerId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    get:
+      operationId: get_orgs_org_actions_hosted_runners_hostedRunnerId
+      tags:
+      - Orgs
+      summary: Get a specific hosted runner
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: hostedRunnerId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    patch:
+      operationId: patch_orgs_org_actions_hosted_runners_hostedRunnerId
+      tags:
+      - Orgs
+      summary: Organization permissions for "Administration"
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: hostedRunnerId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/actions/oidc/customization/properties/repo:
+    get:
+      operationId: get_orgs_org_actions_oidc_customization_properties_repo
+      tags:
+      - Orgs
+      summary: Get OIDC customization properties for a repository
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_orgs_org_actions_oidc_customization_properties_repo
+      tags:
+      - Orgs
+      summary: Organization permissions for "Administration"
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/actions/oidc/customization/properties/repo/{customPropertyName}:
+    delete:
+      operationId: delete_orgs_org_actions_oidc_customization_properties_repo_customPropertyName
+      tags:
+      - Orgs
+      summary: Organization permissions for "Administration"
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: customPropertyName
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/actions/oidc/customization/sub:
+    get:
+      operationId: get_orgs_org_actions_oidc_customization_sub
+      tags:
+      - Orgs
+      summary: Get OIDC customization sub property
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    put:
+      operationId: put_orgs_org_actions_oidc_customization_sub
+      tags:
+      - Orgs
+      summary: Organization permissions for "Administration"
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/actions/permissions:
+    put:
+      operationId: put_orgs_org_actions_permissions
+      tags:
+      - Orgs
+      summary: Organization permissions for "Administration"
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/actions/permissions/repositories/{repositoryId}:
+    delete:
+      operationId: delete_orgs_org_actions_permissions_repositories_repositoryId
+      tags:
+      - Orgs
+      summary: Permissions required for fine-grained personal access tokens
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: repositoryId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    put:
+      operationId: put_orgs_org_actions_permissions_repositories_repositoryId
+      tags:
+      - Orgs
+      summary: Permissions required for fine-grained personal access tokens
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: repositoryId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/actions/permissions/self-hosted-runners/repositories:
+    put:
+      operationId: put_orgs_org_actions_permissions_self_hosted_runners_repositories
+      tags:
+      - Orgs
+      summary: Permissions required for fine-grained personal access tokens
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/actions/permissions/self-hosted-runners/repositories/{repositoryId}:
+    delete:
+      operationId: delete_orgs_org_actions_permissions_self_hosted_runners_repositories_repositoryI
+      tags:
+      - Orgs
+      summary: Permissions required for fine-grained personal access tokens
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: repositoryId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    put:
+      operationId: put_orgs_org_actions_permissions_self_hosted_runners_repositories_repositoryId
+      tags:
+      - Orgs
+      summary: Permissions required for fine-grained personal access tokens
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: repositoryId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/actions/permissions/{permissionid}:
+    put:
+      operationId: put_orgs_org_actions_permissions_permissionid
+      tags:
+      - Orgs
+      summary: Organization permissions for "Administration"
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: permissionid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 7 example path(s) differing only at permissionId
+  /orgs/{org}/actions/policies/{policyId}:
+    delete:
+      operationId: delete_orgs_org_actions_policies_policyId
+      tags:
+      - Orgs
+      summary: Delete an actions policy
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: policyId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    get:
+      operationId: get_orgs_org_actions_policies_policyId
+      tags:
+      - Orgs
+      summary: Get an actions policy
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: policyId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    put:
+      operationId: put_orgs_org_actions_policies_policyId
+      tags:
+      - Orgs
+      summary: Update an actions policy
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: policyId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/actions/{actionid}:
+    get:
+      operationId: get_orgs_org_actions_actionid
+      tags:
+      - Orgs
+      summary: List hosted runners for an organization
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: actionid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at actionId
+  /orgs/{org}/code-scanning/ai-scan:
+    patch:
+      operationId: patch_orgs_org_code_scanning_ai_scan
+      tags:
+      - Orgs
+      summary: Patch an AI scan
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/code-security/configurations/{configurationId}:
+    delete:
+      operationId: delete_orgs_org_code_security_configurations_configurationId
+      tags:
+      - Orgs
+      summary: Delete a code security configuration
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: configurationId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    patch:
+      operationId: patch_orgs_org_code_security_configurations_configurationId
+      tags:
+      - Orgs
+      summary: Update a code security configuration
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: configurationId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/code-security/configurations/{configurationId}/attach:
+    post:
+      operationId: post_orgs_org_code_security_configurations_configurationId_attach
+      tags:
+      - Orgs
+      summary: Attach a code security configuration
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: configurationId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/code-security/configurations/{configurationId}/defaults:
+    put:
+      operationId: put_orgs_org_code_security_configurations_configurationId_defaults
+      tags:
+      - Orgs
+      summary: Set defaults for a code security configuration
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: configurationId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/copilot/billing/{billingid}:
+    delete:
+      operationId: delete_orgs_org_copilot_billing_billingid
+      tags:
+      - Orgs
+      summary: Delete selected teams from Copilot billing
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: billingid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at billingId
+    post:
+      operationId: post_orgs_org_copilot_billing_billingid
+      tags:
+      - Orgs
+      summary: Add selected teams to Copilot billing
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: billingid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 2 example path(s) differing only at billingId
+  /orgs/{org}/dependabot/repository-access:
+    patch:
+      operationId: patch_orgs_org_dependabot_repository_access
+      tags:
+      - Orgs
+      summary: Update Dependabot repository access settings
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/dependabot/repository-access/default-level:
+    put:
+      operationId: put_orgs_org_dependabot_repository_access_default_level
+      tags:
+      - Orgs
+      summary: Set default Dependabot repository access level
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/insights/api/user-stats/{userId}:
+    get:
+      operationId: get_orgs_org_insights_api_user_stats_userId
+      tags:
+      - Orgs
+      summary: Organization permissions for "API Insights"
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: userId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/insights/api/{apiid}:
+    get:
+      operationId: get_orgs_org_insights_api_apiid
+      tags:
+      - Orgs
+      summary: Organization permissions for "API Insights"
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: apiid
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 3 example path(s) differing only at apiId
+  /orgs/{org}/insights/api/{apiid}/{actorType}/{actorId}:
+    get:
+      operationId: get_orgs_org_insights_api_apiid_actorType_actorId
+      tags:
+      - Orgs
+      summary: Organization permissions for "API Insights"
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: apiid
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: actorType
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: actorId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+        collapsed_from: 3 example path(s) differing only at apiId
+  /orgs/{org}/interaction-limits:
+    delete:
+      operationId: delete_orgs_org_interaction_limits
+      tags:
+      - Orgs
+      summary: Remove interaction limits for an organization
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    put:
+      operationId: put_orgs_org_interaction_limits
+      tags:
+      - Orgs
+      summary: Set interaction limits for an organization
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/interaction-limits/pulls/creation-cap:
+    get:
+      operationId: get_orgs_org_interaction_limits_pulls_creation_cap
+      tags:
+      - Orgs
+      summary: Get pull request creation cap for interaction limits
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    patch:
+      operationId: patch_orgs_org_interaction_limits_pulls_creation_cap
+      tags:
+      - Orgs
+      summary: Update pull request creation cap for interaction limits
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/rulesets:
+    get:
+      operationId: get_orgs_org_rulesets
+      tags:
+      - Orgs
+      summary: List organization rulesets
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    post:
+      operationId: post_orgs_org_rulesets
+      tags:
+      - Orgs
+      summary: Create a new organization ruleset
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/rulesets/rule-suites/{ruleSuiteId}:
+    get:
+      operationId: get_orgs_org_rulesets_rule_suites_ruleSuiteId
+      tags:
+      - Orgs
+      summary: GET /orgs/{org}/rulesets/rule-suites/{rule_suite_id} write
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: ruleSuiteId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/rulesets/{rulesetId}:
+    delete:
+      operationId: delete_orgs_org_rulesets_rulesetId
+      tags:
+      - Orgs
+      summary: DELETE /orgs/{org}/rulesets/{ruleset_id} write
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: rulesetId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    get:
+      operationId: get_orgs_org_rulesets_rulesetId
+      tags:
+      - Orgs
+      summary: GET /orgs/{org}/rulesets/{ruleset_id} write
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: rulesetId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    put:
+      operationId: put_orgs_org_rulesets_rulesetId
+      tags:
+      - Orgs
+      summary: PUT /orgs/{org}/rulesets/{ruleset_id} write
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: rulesetId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/rulesets/{rulesetId}/history:
+    get:
+      operationId: get_orgs_org_rulesets_rulesetId_history
+      tags:
+      - Orgs
+      summary: GET /orgs/{org}/rulesets/{ruleset_id}/history write
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: rulesetId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/rulesets/{rulesetId}/history/{versionId}:
+    get:
+      operationId: get_orgs_org_rulesets_rulesetId_history_versionId
+      tags:
+      - Orgs
+      summary: GET /orgs/{org}/rulesets/{ruleset_id}/history/{version_id} write
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: rulesetId
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: versionId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/secret-scanning/custom-patterns:
+    delete:
+      operationId: delete_orgs_org_secret_scanning_custom_patterns
+      tags:
+      - Orgs
+      summary: DELETE /orgs/{org}/secret-scanning/custom-patterns write
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/secret-scanning/custom-patterns/{patternId}:
+    patch:
+      operationId: patch_orgs_org_secret_scanning_custom_patterns_patternId
+      tags:
+      - Orgs
+      summary: PATCH /orgs/{org}/secret-scanning/custom-patterns/{pattern_id} write
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: patternId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/secret-scanning/pattern-configurations:
+    patch:
+      operationId: patch_orgs_org_secret_scanning_pattern_configurations
+      tags:
+      - Orgs
+      summary: PATCH /orgs/{org}/secret-scanning/pattern-configurations write
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/security-managers/teams/{teamSlug}:
+    delete:
+      operationId: delete_orgs_org_security_managers_teams_teamSlug
+      tags:
+      - Orgs
+      summary: DELETE /orgs/{org}/security-managers/teams/{team_slug} write
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: teamSlug
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    put:
+      operationId: put_orgs_org_security_managers_teams_teamSlug
+      tags:
+      - Orgs
+      summary: PUT /orgs/{org}/security-managers/teams/{team_slug} write
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: teamSlug
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/settings/immutable-releases:
+    put:
+      operationId: put_orgs_org_settings_immutable_releases
+      tags:
+      - Orgs
+      summary: Permissions required for fine-grained personal access tokens
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/settings/immutable-releases/repositories:
+    put:
+      operationId: put_orgs_org_settings_immutable_releases_repositories
+      tags:
+      - Orgs
+      summary: Permissions required for fine-grained personal access tokens
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/settings/immutable-releases/repositories/{repositoryId}:
+    delete:
+      operationId: delete_orgs_org_settings_immutable_releases_repositories_repositoryId
+      tags:
+      - Orgs
+      summary: Permissions required for fine-grained personal access tokens
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: repositoryId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+    put:
+      operationId: put_orgs_org_settings_immutable_releases_repositories_repositoryId
+      tags:
+      - Orgs
+      summary: Permissions required for fine-grained personal access tokens
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: repositoryId
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+  /orgs/{org}/{securityProduct}/{enablement}:
+    post:
+      operationId: post_orgs_org_securityProduct_enablement
+      tags:
+      - Orgs
+      summary: Permissions required for fine-grained personal access tokens
+      x-source: https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+      parameters:
+      - name: org
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: securityProduct
+        in: path
+        required: true
+        schema:
+          type: string
+      - name: enablement
+        in: path
+        required: true
+        schema:
+          type: string
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: documentation
+components:
+  schemas:
+    PostApplicationsClientidTokenRequest:
+      type: object
+      properties:
+        access_token:
+          type: string
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
+security:
+- bearer: []
+tags:
+- name: Api
+- name: Applications
+- name: Copilot Install
+- name: Octocat
+- name: Organizations
+- name: Orgs
+- name: Path
