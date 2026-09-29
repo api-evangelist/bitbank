@@ -40,21 +40,28 @@ hosts:
   - docs-index
   - contract-discovery
   - well-known
+  - vendor-detect
   types:
+  - Security
+  - Blog
   - Website
   - GettingStarted
   - PrivacyPolicy
   serves:
   - docs
+  - cdn
+  vendor: cloudfront
   registrable_domain: bitbank.cc
   role: website
   relation: own
 - host: corporate.bitbank.cc
   found_by:
+  - pointer
   - probed
   - site-links
   - well-known
-  types: []
+  types:
+  - Newsroom
   serves: []
   registrable_domain: bitbank.cc
   role: other
@@ -66,9 +73,12 @@ hosts:
   - site-links
   - contract-discovery
   - well-known
+  - vendor-detect
   types:
   - Documentation
-  serves: []
+  serves:
+  - hosting
+  vendor: github-pages
   registrable_domain: bitbank.cc
   role: docs
   relation: own
@@ -109,9 +119,12 @@ hosts:
   - site-links
   - contract-discovery
   - well-known
+  - vendor-detect
   types:
   - Support
-  serves: []
+  serves:
+  - support
+  vendor: zendesk
   registrable_domain: bitbank.cc
   role: support
   relation: own
