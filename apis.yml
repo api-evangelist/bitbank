@@ -75,19 +75,90 @@ common:
   url: https://bitbank.cc/privacy-policy
 
 apis:
-- aid: bitbank:bitbank-api
-  name: bitbank API
-  description: 'bitbank API as documented publicly: 71 operations. Contract generated from the documentation by API Evangelist (2026-09-28); not
-    the provider''s own document.'
+- aid: bitbank:bitbank-applications-api
+  name: bitbank Applications API
+  description: The Applications API from bitbank — 1 operation(s) for applications.
   humanURL: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands
   baseURL: https://gh.io
+  tags:
+  - Applications
   properties:
   - type: OpenAPI
-    url: openapi/_ae-authored/bitbank-openapi-generated.yml
-    x-provenance: generated
+    url: openapi/bitbank-applications-api-openapi.yml
   - type: JSONSchema
     url: json-schema/bitbank-post-applications-clientid-token-request-schema.json
-
+- aid: bitbank:bitbank-bitbank-api-api
+  name: bitbank Bitbank API
+  description: The Bitbank API API from bitbank — 1 operation(s) for bitbank api.
+  humanURL: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands
+  baseURL: https://gh.io
+  tags:
+  - Bitbank API
+  properties:
+  - type: OpenAPI
+    url: openapi/bitbank-bitbank-api-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/bitbank-post-applications-clientid-token-request-schema.json
+- aid: bitbank:bitbank-copilot-install-api
+  name: bitbank Copilot Install API
+  description: The Copilot Install API from bitbank — 1 operation(s) for copilot install.
+  humanURL: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands
+  baseURL: https://gh.io
+  tags:
+  - Copilot Install
+  properties:
+  - type: OpenAPI
+    url: openapi/bitbank-copilot-install-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/bitbank-post-applications-clientid-token-request-schema.json
+- aid: bitbank:bitbank-octocat-api
+  name: bitbank Octocat API
+  description: The Octocat API from bitbank — 1 operation(s) for octocat.
+  humanURL: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands
+  baseURL: https://gh.io
+  tags:
+  - Octocat
+  properties:
+  - type: OpenAPI
+    url: openapi/bitbank-octocat-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/bitbank-post-applications-clientid-token-request-schema.json
+- aid: bitbank:bitbank-organizations-api
+  name: bitbank Organizations API
+  description: The Organizations API from bitbank — 6 operation(s) for organizations.
+  humanURL: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands
+  baseURL: https://gh.io
+  tags:
+  - Organizations
+  properties:
+  - type: OpenAPI
+    url: openapi/bitbank-organizations-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/bitbank-post-applications-clientid-token-request-schema.json
+- aid: bitbank:bitbank-orgs-api
+  name: bitbank Orgs API
+  description: The Orgs API from bitbank — 39 operation(s) for orgs.
+  humanURL: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands
+  baseURL: https://gh.io
+  tags:
+  - Orgs
+  properties:
+  - type: OpenAPI
+    url: openapi/bitbank-orgs-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/bitbank-post-applications-clientid-token-request-schema.json
+- aid: bitbank:bitbank-path-api
+  name: bitbank Path API
+  description: The Path API from bitbank — 1 operation(s) for path.
+  humanURL: https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands
+  baseURL: https://gh.io
+  tags:
+  - Path
+  properties:
+  - type: OpenAPI
+    url: openapi/bitbank-path-api-openapi.yml
+  - type: JSONSchema
+    url: json-schema/bitbank-post-applications-clientid-token-request-schema.json
 x-coverage:
   state: unreadable
   reason: js-rendered-docs

@@ -1,0 +1,65 @@
+openapi: 3.2.0
+info:
+  title: bitbank Applications API
+  version: '2026-09-28'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-28: 71 operation(s) read from 4 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; bitbank has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 5
+    documentation: 66
+    pages-with-code: 3
+    pages-read: 4
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-28'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands
+  - https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api
+  - https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli
+  - https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+servers:
+- url: https://gh.io
+security:
+- bearer: []
+tags:
+- name: Applications
+paths:
+  /applications/{clientid}/token:
+    post:
+      operationId: post_applications_clientid_token
+      tags:
+      - Applications
+      summary: POST /applications/{clientId}/token
+      x-source: https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api
+      parameters:
+      - name: clientid
+        in: path
+        required: true
+        schema:
+          type: string
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PostApplicationsClientidTokenRequest'
+      responses:
+        '201':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request POST  --url \"https://api.github.com/applications/YOUR_CLIENT_ID/token\"  --user \"YOUR_CLIENT_ID:YOUR_CLIENT_SECRET\"  --header \"Accept: application/vnd.github+json\"  --header \"X-GitHub-Api-Version: 2026-03-10\"  --data '{\n \"access_token\": \"ACCESS_TOKEN_TO_CHECK\"\n}'\n The client ID and client secret are associated with the app, not with the owner of the app or a user who authorized the a"
+components:
+  schemas:
+    PostApplicationsClientidTokenRequest:
+      type: object
+      properties:
+        access_token:
+          type: string
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer

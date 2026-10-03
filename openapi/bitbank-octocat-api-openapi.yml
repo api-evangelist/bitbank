@@ -1,0 +1,47 @@
+openapi: 3.2.0
+info:
+  title: bitbank Octocat API
+  version: '2026-09-28'
+  description: 'GENERATED FROM DOCUMENTATION by API Evangelist on 2026-09-28: 71 operation(s) read from 4 public documentation page(s) (each operation names its page in x-source). This is not the provider''s published contract; bitbank has published no machine-readable contract that the pipeline could find. Engine: local.'
+  x-evidence-tiers:
+    code-example: 5
+    documentation: 66
+    pages-with-code: 3
+    pages-read: 4
+  x-generated-from: documentation
+  x-provenance: generated
+  x-authored-by: API Evangelist
+  x-generated: '2026-09-28'
+  x-generator: generate-contract-from-docs.py
+  x-engine: local
+  x-sources:
+  - https://docs.github.com/en/actions/reference/workflows-and-actions/workflow-commands
+  - https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api
+  - https://docs.github.com/en/copilot/how-tos/copilot-cli/set-up-copilot-cli/install-copilot-cli
+  - https://docs.github.com/en/rest/authentication/permissions-required-for-fine-grained-personal-access-tokens
+servers:
+- url: https://gh.io
+security:
+- bearer: []
+tags:
+- name: Octocat
+paths:
+  /octocat:
+    get:
+      operationId: get_octocat
+      tags:
+      - Octocat
+      summary: GET /octocat
+      x-source: https://docs.github.com/en/rest/authentication/authenticating-to-the-rest-api
+      responses:
+        '200':
+          description: Success (status as documented)
+      x-evidence:
+        kind: code-example
+        language: curl
+        snippet: "curl --request GET  --url \"https://api.github.com/octocat\"  --header \"Authorization: Bearer YOUR-TOKEN\"  --header \"X-GitHub-Api-Version: 2026-03-10\"\n Note \nIn most cases, you can use Authorization: Bearer or Authorization: token to pass a token. However, if you are passing a JSON web token (JWT), you must use Authorization: Bearer . \n Failed login limit \n If you try to use a REST API endpoint with"
+components:
+  securitySchemes:
+    bearer:
+      type: http
+      scheme: bearer
