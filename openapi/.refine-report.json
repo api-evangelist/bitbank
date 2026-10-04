@@ -20,7 +20,15 @@
     "bitbank-openapi-generated.yml: upgraded openapi 3.1.0 -> OpenAPI 3.2.0",
     "bitbank-openapi-generated.yml: tagged paths GET / -> Bitbank API",
     "bitbank-openapi-generated.yml: declared missing tag: Bitbank API",
-    "apis.yml register: written (+7 apis, 7 total)"
+    "apis.yml register: already-registered"
   ],
-  "skipped": []
+  "skipped": [
+    "bitbank-applications-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "bitbank-bitbank-api-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "bitbank-copilot-install-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "bitbank-octocat-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "bitbank-organizations-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "bitbank-orgs-api-openapi.yml: previously refined output, superseded by openapi/_original/",
+    "bitbank-path-api-openapi.yml: previously refined output, superseded by openapi/_original/"
+  ]
 }
