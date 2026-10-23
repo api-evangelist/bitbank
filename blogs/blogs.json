@@ -5,12 +5,19 @@
       "source": "https://bitbank.cc/blog",
       "feed_url": "https://bitbank.cc/blog/feed/",
       "title": "",
-      "saved": 3,
+      "saved": 0,
       "method": "discovered"
     },
     {
       "source": "https://corporate.bitbank.cc/rss.xml",
       "feed_url": "https://corporate.bitbank.cc/rss.xml",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://bitbank.cc/blog/feed/",
+      "feed_url": "https://bitbank.cc/blog/feed/",
       "title": "",
       "saved": 0,
       "method": "feed"
@@ -23,6 +30,6 @@
       "method": "none"
     }
   ],
-  "post_count": 3,
-  "fetched": "2026-10-10T13:15:00Z"
+  "post_count": 16,
+  "fetched": "2026-10-17T14:53:57Z"
 }
