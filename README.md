@@ -64,5 +64,115 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-bitbank is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Bitbank is a Japanese cryptocurrency exchange offering spot, margin, lending, staking, and API trading services. It provides a public API for market data and order execution, targeting both retail and institutional clients. The platform emphasizes security, instant JPY withdrawals, and a wide range of crypto assets.
+
+**Areas:** Cryptocurrency · Exchange · Japan · Finance
+
+## bitbank on APIs.io
+
+Everything profiled for bitbank is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/bitbank/](https://apis.io/providers/bitbank/)** — or go straight to one of the APIs or properties below.
+
+### APIs (7)
+
+- [bitbank Applications API](https://apis.io/apis/bitbank/bitbank-applications-api/) — The Applications API from bitbank — 1 operation(s) for applications.
+- [bitbank Bitbank API](https://apis.io/apis/bitbank/bitbank-bitbank-api-api/) — The Bitbank API API from bitbank — 1 operation(s) for bitbank api.
+- [bitbank Copilot Install API](https://apis.io/apis/bitbank/bitbank-copilot-install-api/) — The Copilot Install API from bitbank — 1 operation(s) for copilot install.
+- [bitbank Octocat API](https://apis.io/apis/bitbank/bitbank-octocat-api/) — The Octocat API from bitbank — 1 operation(s) for octocat.
+- [bitbank Organizations API](https://apis.io/apis/bitbank/bitbank-organizations-api/) — The Organizations API from bitbank — 6 operation(s) for organizations.
+- [bitbank Orgs API](https://apis.io/apis/bitbank/bitbank-orgs-api/) — The Orgs API from bitbank — 39 operation(s) for orgs.
+- [bitbank Path API](https://apis.io/apis/bitbank/bitbank-path-api/) — The Path API from bitbank — 1 operation(s) for path.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### JSON Schema (1)
+
+The data models the API reads and writes.
+
+- [PostApplicationsClientidTokenRequest](https://apis.io/schemas/bitbank/bitbank-post-applications-clientid-token-request/)
+
+#### JSON-LD (1)
+
+Linked-data contexts for the provider's vocabulary.
+
+- [Bitbank Context](https://apis.io/jsonld/bitbank/bitbank-context/)
+
+#### Governance rules (1)
+
+Spectral rulesets for the provider's contracts.
+
+- [bitbank API Rules](https://apis.io/rules/bitbank/bitbank-rules/)
+
+#### Security (2)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Bitbank Authentication](https://apis.io/security/bitbank/bitbank-authentication/)
+- [Bitbank Domain Security](https://apis.io/security/bitbank/bitbank-domain-security/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://bitbank.cc)
+- [Documentation](https://docs.bitbank.cc)
+- [Getting started](https://bitbank.cc/guide/flow)
+- [API reference](https://github.com/bitbankinc/bitbank-api-docs)
+- [Support](https://support.bitbank.cc/hc/ja/requests/new)
+- [Blog](https://bitbank.cc/blog)
+- [Security](https://bitbank.cc/guide/security)
+- [Privacy policy](https://bitbank.cc/privacy-policy)
+
+## API Evangelist rating
+
+**Kin Score 25.9** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 64.3 |
+| Contract quality | 19.0 |
+| Contract governance | 22.0 |
+| Operational transparency | 10.5 |
+| Developer ergonomics | 47.6 |
+| Access clarity | 10.5 |
+
+**Agent readiness 15.5** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | bearer (partial credit) |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 19.4** — Securities & Market Data
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/bitbank/](https://apis.io/providers/bitbank/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for bitbank: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/bitbank/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
